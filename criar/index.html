@@ -1,0 +1,53 @@
+
+<section class="panel panel-default">
+  <header class="panel-heading">Criar Enquete</header>
+  <div class="Block-level">
+    <blockquote class="blockquote">
+      <nav class="navbar navbar-default">
+
+          <div class="form-group">
+            <label for="titulo">Titulo da Enquete</label>
+            <input type="text" data-ng-model="titulo" class="form-control" id="titulo" placeholder="Digite Titulo da enquete">
+          </div>
+
+          <div class="form-group">
+              <label for="texto">Descrição da Enquete</label>
+              <input type="text" data-ng-model="texto" class="form-control" id="texto" placeholder="Digite descrição da enquete">
+            </div>
+
+          <label for="volume">Opções da Enquete</label>
+
+          <div class="input-group">
+            <span class="input-group-addon">
+                <button class="glyphicon glyphicon-plus" type="button" ng-click="addItem(itemName)"></button>
+            </span>
+            <input type="text" class="form-control"  ng-model="itemName" placeholder="Digite uma opção da Enquete..">
+          </div>
+      </nav>
+    </blockquote>
+
+    <blockquote class="blockquote">
+      <table class="table table-bordered table-hover table-striped">
+        <thead>
+          <tr>
+            <th>Opção</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-ng-repeat="opcao in opcoes">
+            <td>{{ coisa.texto }}</td>
+            <td>
+              <button class="btn btn-danger btn-xs" ng-click="deleteOpcao($index, opcao)">
+                  <i class="glyphicon glyphicon-remove"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="reset" class="btn btn-danger">Limpar</button>
+      <button type="button" class="btn btn-success" ng-click="addEnquete()">Salvar</button>
+    </blockquote>
+
+  </div>
+</section>

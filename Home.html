@@ -1,0 +1,17 @@
+<section class="panel panel-default">
+  <header class="panel-heading">Listar Enquete</header>
+
+  <body>
+
+    <div class="Block-level">
+      <blockquote class="blockquote">
+        <a class="item item-thumbnail-left" href="#/votar/{{enquete.id}}" ng-repeat="enquete in enquetes.values">
+          <img   height="260" width="180" class="img-responsive" ng-src="{{enquete.urlImagem}}"> </img>
+          <h1 class="display-1">{{enquete.titulo}}</h1>
+          <p class="lead">{{enquete.texto}}</p>
+        </a>
+      </blockquote>
+    </div>
+
+  </body>
+</section>

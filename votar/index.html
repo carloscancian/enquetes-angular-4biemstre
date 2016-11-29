@@ -1,0 +1,24 @@
+
+<section class="panel panel-default" view-title="votarController" >
+  <header class="panel-heading">Votar em Enquete</header>
+  <div class="Panel title">
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <label for="coisa">Titulo da enquete</label>
+          <a class="list-group-item" data-ng-repeat="enquete in enquetes">
+            <h2>{{enquete.titulo}}</h2>
+            <h2>{{enquete.texto}}</h2>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <hr/>
+    <div class="list-group">
+      <a  class="list-group-item" data-ng-repeat="opcao in opcoes">
+        {{coisa.texto}}
+      </a>
+    </div>
+  </div>
+</section>
